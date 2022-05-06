@@ -16,15 +16,17 @@ int main(){
 
 	printf("| Ingrese la calificacion: ");
 	scanf("%f", &nota);
-	//repeater('=', EQUALS);
 
 	if(nota < 11 && nota > 0)
 		if(nota < min)
-			printf("| Desaprobado.\n\n");
+			printf("| Desaprobado.\n");
 		else
-			printf("| Aprobado.\n\n");
+			printf("| Aprobado.\n");
 	else
 		printf("Por favor recuerde que los numeros validos son entre 0 y 10, no se aceptan porcentajes.\n\n");
+
+    repeater('=', EQUALS);
+    printf("\n");
 	
 	return 0;
 }
