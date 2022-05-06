@@ -1,3 +1,0 @@
-Para lo hacer las cajas y eso, para tomar el largo de la linea en vez de
-contar una por una agarrar y contar con una funcion o algo para ahorrar tiempo
-y no contar de a uno como mono

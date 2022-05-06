@@ -1,3 +1,5 @@
+/* Yeah, this is the 1-3 excercise but in the opposite direction.*/
+
 #include <stdio.h>
 #include <mylib.h>
 
@@ -13,7 +15,7 @@ main(){
 	printf("\n");
 	repeater('=',REPEAT);
 	
-	printf("Este programa muestra equidades entre grados centigrados y grados fahrenheit.\n");
+	printf("|\t\tThis program exemplifies the Celsius to Fahrenheit convertion.\t  |\n");
 	
 	repeater('=',REPEAT);
 	printf("\t\t\t|\tCentigrados\t|\tFahrenheit\t|\n");

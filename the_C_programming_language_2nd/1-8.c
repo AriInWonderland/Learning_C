@@ -1,4 +1,5 @@
-/* Se puede hacer con switch pero me parece que seria muy largo el codigo y con los if es mas rapido, corto y facil de leer mas que nada*/
+/* This can also be done with a switch but I personally prefer if loops, it's easier to read in shorter programs like this one.*/
+
 #include <stdio.h>
 #include <mylib.h>
 #define REPEAT0   61
@@ -12,7 +13,7 @@ main(){
 	printf("\n");
 	repeater(REPEATED,REPEAT0);
 
-	printf("|Este programa contara los espacios en blanco, tabulaciones y|\n|new lines del input que usted ingrese\t\t\t\t\t |\n");
+	printf("|This program will count the blanks, tabs and\t\t\t |\n|new lines from it's input.\t\t\t\t\t\t\t |\n");
 	repeater(REPEATED,REPEAT0);
 	printf("\n");
 
@@ -28,7 +29,7 @@ main(){
 	printf("\n");
 	repeater(REPEATED,REPEAT1);
 
-	printf("|Espacios = %8d|\n|Tabulaciones = %4d|\n|New Lines = %7d|\n", bl, tabs, nl);
+	printf("|Blanks = %10d|\n|Tabs = %12d|\n|New Lines = %7d|\n", bl, tabs, nl);
 
 	repeater(REPEATED,REPEAT1);
 	printf("\n");
