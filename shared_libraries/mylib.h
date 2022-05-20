@@ -1,7 +1,8 @@
 /* This file includes custom libraries I use for the stuff that I do in C.*/
+
 /* This function prints the s char, x times, so it can be easily used to make 
  * cute outputs without making the code an unreadible mess.*/
-int repeater(char s, int x){
+void repeater(char s, int x){
 	int i;
 	
 	printf("*");
