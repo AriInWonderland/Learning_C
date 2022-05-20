@@ -1,2 +1,24 @@
-Para mandar las librerias en la carpeta simplemete usar en gcc el flag -I con
-el dir ~/programing/C/librerias o el directorio en donde estan las librerias.
+Okey, I tried to translate everything to English, I am not a native speaker
+so don't spect anything perfect.
+
+
+I am doing this only to keep track my learning and to have it stored in a more "secure"
+way, I am not specting feedback or anything aside from ,idk, my teachers? 
+
+
+I am using the second edition of the C book so it's ANSI.
+
+
+The output from the school excercises are in Spanish. Why?
+
+ 1. I am not sure how to translate it whithout it sounding weird.
+ 2. This a school excercise so just in case.
+
+
+Oh and note for myself:
+To use librearies with gcc use the -I flag with the path to the libraries, it would look something like this:
+
+gcc TheFlagsYouWant/Need -I ~/libraries/
+
+
+Yes, I like the word 'stuff'.
