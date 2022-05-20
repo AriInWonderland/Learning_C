@@ -12,7 +12,7 @@ I am using the second edition of the C book so it's ANSI.
 The output from the school excercises are in Spanish. Why?
 
  1. I am not sure how to translate it whithout it sounding weird.
- 2. This a school excercise so just in case.
+ 2. It's the language that I use at school.
 
 
 Oh and note for myself:
