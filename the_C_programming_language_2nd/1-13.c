@@ -4,20 +4,43 @@
 #include <mylib.h>
 
 #define LIMIT 100
+#define IN 1
+#define OUT 0
 
 main(){
-    int a, c, i=0, lc=0;
-    char wc[LIMIT];
+    int a,c,i, state, lc=0;
+    int wc[LIMIT];
 
+    for(i=0;i<=LIMIT;i++)
+        wc[i]=0;
+    i=0;
     printf("\n");
 
-    while((c=getchar()) != '['){
-    lc++;
-        if(c == ' ' || c == '\n' || c == '\t'){
-            wc[i] = lc; 
-            lc =0 ;
+    state = OUT;
+    while((c = getchar()) != '['){
+
+        if(c == ' '|| c == '\n' || c == '\t')
+            state=OUT;
+        else if(state == OUT){
+            state=IN;
+        }
+        if(state == IN)
+            lc++;
+
+        if(state == OUT){
+            wc[i] = lc;
+            lc = 0;
             i++;
         }
     } 
-    printf("\nlc = %d\nwc = %s\n\n", lc, wc);
+    wc[i] = lc;
+    lc = 0;
+    i++;
+
+    for(i=0; wc[i] != '\0'; i++){
+        printf("Word %2d, %2d Letters: ", i+1, wc[i]);
+        for(a=0; a < wc[i];a++)
+            printf("=");
+        printf("\n");
+    }
 }
