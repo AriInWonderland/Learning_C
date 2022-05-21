@@ -13,7 +13,7 @@ main(){
 	printf("\n");
 	repeater('-',62);
 
-	printf("Este programa copiara el texto ingresado una palabra por linea.\n");
+	printf("| This program will print it's output at the end of the loop, |\n| each word in a new line.                                    |\n");
 	
 	repeater('-',62);
 	printf("\n");
@@ -24,5 +24,5 @@ main(){
 			s[i] = '\n';
 		i++;
 	}	
-	printf("%s\n", s);
+	printf("\n%s\n\n", s);
 }
