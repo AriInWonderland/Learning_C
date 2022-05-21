@@ -4,7 +4,7 @@
 #define OUT     0
 #define LIMIT 100
 
-/*Si esta OUT c = \n*/
+/*if OUT of a word, c = \n*/
 
 main(){
 	int c, i=0;
