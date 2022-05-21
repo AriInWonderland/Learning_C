@@ -16,5 +16,11 @@ void ctoft(int lim, int step){
 }
 
 main(){
-    ctoft(300,20);
+    int lmt, stps;
+    printf("This program will output a fahrenhei|celsius table.\nPlease choose a maximum number: ");
+    scanf("%d", &lmt);
+    printf("And how big will the increment be each time: ");
+    scanf("%d", &stps);
+
+    ctoft(lmt,stps);
 }
