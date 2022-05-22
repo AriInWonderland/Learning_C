@@ -51,3 +51,23 @@ void concat(char to[], char from[]){
         a++;
     }
 }
+
+/* 1-18 a function which removes the trailing blanks and tabs and deletes entirely blank lines.*/
+int rmv(char s[]){
+    int i=0;
+
+    while(s[i] != '\n') /* Searches for the end of the line*/
+        i++;
+    i--;
+    while(i>= 0 && s[i] == ' ' || s[i] == '\t') /*Goes backwards for each ' ' or tab, to overwrite them later*/
+        i--;
+    
+    if(i>=0){ /* If it's all blanks i should be -1*/
+        i++;
+        s[i]='\n';
+        i++;
+        s[i]='\0';
+    }
+    return i;
+}
+
