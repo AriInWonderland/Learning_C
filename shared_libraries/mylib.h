@@ -71,3 +71,21 @@ int rmv(char s[]){
     return i;
 }
 
+/* 1-19 A function which reverses a character string*/
+void reverse(char s[]){
+    int i,j;
+    char temp;
+
+    for(i=0; s[i]!='\0'; i++)
+        ;
+    i--;
+   
+    j=0;
+    while(j<i){
+        temp=s[j];
+        s[j]=s[i];
+        s[i]=temp;
+        j++;
+        i--;
+    }
+}
