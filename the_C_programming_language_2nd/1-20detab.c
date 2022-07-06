@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #define TABSTOPS 12
-#define TABSPACE 4
+#define TABSPACE  4
 #define MAXLINE 100
 
 char line[MAXLINE];
@@ -10,6 +10,7 @@ main(){
     int a=0,c, i=0, skip;
 
     while((c=getchar()) != '['){
+
         if(c=='\t'){
             skip = i+TABSPACE;
             for(; i< skip; i++)
@@ -18,7 +19,8 @@ main(){
         else{
             line[i] = c;
             i++;
-        }
+        } 
     }
     printf("\n%s\n", line);
+    printf("[DEBUG] a = %d\n", a);
 }
