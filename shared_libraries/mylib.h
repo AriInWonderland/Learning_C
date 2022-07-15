@@ -91,15 +91,44 @@ void reverse(char s[]){
 }
 
 /* 2-3 Write a function htoi(s) which converts a string of hexadecimal digits (including an optional 
- * 0x or 0X) to its equivalent integer value, 0 through 9, a through f, and A through F
-int htoi(char s[]){
-    int i, n, sign;
+ * 0x or 0X) to its equivalent integer value, 0 through 9, a through f, and A through F*/
+int htoi(char s[], int lim){
+    int i, n, j, c=0, sk, dec=0;
     
-    for(i=0; s[i] == '0' || s[i] == 'X' || s[i] == 'x'; i++)  Skip 0 and x/X 
-        ;
-}
-*/
+    n = getlen(s, lim);   
+    for(sk=0; s[sk] == 'x' || s[sk] == 'X' || s[sk] == '0'; sk++) 
+        ; 
 
+    for(i=sk, j=n-sk-1; i < n; i++, j--){
+        if(isdigit(s[i]))
+            c = s[i] - '0'; 
+
+        else{
+            switch(s[i]){
+                case 'A': case 'a':
+                    c = 10;
+                    break;
+                case 'B': case 'b':
+                    c = 11;
+                    break;
+                case 'C': case 'c':
+                    c = 12;
+                    break;
+                case 'D': case 'd':
+                    c = 13;
+                    break;
+                case 'E': case 'e':
+                    c = 14;
+                    break;
+                case 'F': case 'f':
+                    c = 15;
+                    break;
+            }
+        }
+        dec += c * pot(16, j);
+    }
+    return dec;
+}
 /* A not-very-good power function, it's name is pot because of power in spanish,
  * (potencia), I just didn't want to use the math.h library so I made one myself
  * which works with ints (the one from the library uses doubles if I am not mistaken*/
