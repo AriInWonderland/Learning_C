@@ -89,3 +89,39 @@ void reverse(char s[]){
         i--;
     }
 }
+
+/* 2-3 Write a function htoi(s) which converts a string of hexadecimal digits (including an optional 
+ * 0x or 0X) to its equivalent integer value, 0 through 9, a through f, and A through F
+int htoi(char s[]){
+    int i, n, sign;
+    
+    for(i=0; s[i] == '0' || s[i] == 'X' || s[i] == 'x'; i++)  Skip 0 and x/X 
+        ;
+}
+*/
+
+/* A not-very-good power function, it's name is pot because of power in spanish,
+ * (potencia), I just didn't want to use the math.h library so I made one myself
+ * which works with ints (the one from the library uses doubles if I am not mistaken*/
+int pot(x,y){
+    int c = x;   /* Not sure why but I doesn't work properly whithout this*/
+    if(y != 0 && y != 1)
+        while(y>1){
+            x *= c;
+            --y;
+        }
+    else if(y == 0)
+        x = 1;
+    else if(y == 1)
+        return x;
+    return x;
+}
+
+int getlen(char s[], int lim){
+    int i;
+
+    for(i=0; s[i] != '\0' && i < lim; i++)
+        ;
+
+    return i-1;
+}
